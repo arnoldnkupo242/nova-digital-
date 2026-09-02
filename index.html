@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA DIGITAL — Agence digitale à Kinshasa. Design graphique, vidéo, réseaux sociaux, sites web, IA et marketing digital.">
+  <meta name="theme-color" content="#050b16">
+  <meta property="og:title" content="NOVA DIGITAL — Votre entreprise mérite d'être visible">
+  <meta property="og:description" content="Nous transformons vos idées en impact digital.">
+  <title>NOVA DIGITAL — Votre entreprise mérite d'être visible</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { nova: { bg:'#050b16', card:'#0b1524', blue:'#0066ff', cyan:'#00d2ff' } },
+          fontFamily: { sans:['Inter','ui-sans-serif','system-ui'] }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{--bg:#050b16;--card:#0b1524;--line:rgba(255,255,255,.09);--blue:#0066ff;--cyan:#00d2ff}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,sans-serif;background:var(--bg);color:#fff}
+    .grid-bg{background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px}
+    .glass{background:rgba(11,21,36,.68);border:1px solid var(--line);backdrop-filter:blur(18px)}
+    .gradient-text{background:linear-gradient(90deg,#fff,#70ddff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .gradient-btn{background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 14px 35px rgba(0,140,255,.25)}
+    .gradient-btn:hover{transform:translateY(-2px);box-shadow:0 18px 45px rgba(0,140,255,.38)}
+    .card{transition:.35s ease}
+    .card:hover{transform:translateY(-7px);border-color:rgba(0,210,255,.3);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+    .orb{filter:blur(1px);animation:float 7s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-18px) translateX(10px)}}
+    .reveal{opacity:0;transform:translateY(25px);transition:.75s ease}
+    .reveal.show{opacity:1;transform:none}
+    .counter{font-variant-numeric:tabular-nums}
+    .portfolio-item.hidden{display:none}
+    .portfolio-item{animation:fadeIn .45s ease}
+    @keyframes fadeIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+    .nav-scrolled{background:rgba(5,11,22,.9)!important;border-bottom:1px solid var(--line)}
+    .mobile-cta{display:none}
+    @media(max-width:768px){.mobile-cta{display:flex}}
+  </style>
+</head>
+
+<body class="overflow-x-hidden">
+  <!-- NAVBAR -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
+      <a href="#accueil" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl gradient-btn flex items-center justify-center font-black text-lg">N</div>
+        <div><div class="font-black tracking-wider">NOVA <span class="text-cyan-300">DIGITAL</span></div><div class="text-[9px] uppercase tracking-[.28em] text-slate-400">Impact • Innovation • Visibilité</div></div>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 text-sm text-slate-300">
+        <a class="hover:text-white" href="#accueil">Accueil</a><a class="hover:text-white" href="#agence">L'agence</a>
+        <a class="hover:text-white" href="#services">Services</a><a class="hover:text-white" href="#realisations">Réalisations</a>
+        <a class="hover:text-white" href="#packs">Packs</a><a class="hover:text-white" href="#faq">FAQ</a>
+      </div>
+      <a href="https://wa.me/243819024857" target="_blank" class="hidden sm:flex gradient-btn px-5 py-3 rounded-full font-bold text-sm items-center gap-2 transition"><i class="fa-brands fa-whatsapp"></i> Demander un devis</a>
+      <button id="menuBtn" class="lg:hidden text-2xl p-2" aria-label="Ouvrir le menu"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+    <div id="mobileMenu" class="hidden lg:hidden glass mx-4 rounded-2xl p-4">
+      <div class="grid gap-1 text-slate-200">
+        <a class="p-3 rounded-xl hover:bg-white/5" href="#accueil">Accueil</a><a class="p-3 rounded-xl hover:bg-white/5" href="#agence">L'agence</a>
+        <a class="p-3 rounded-xl hover:bg-white/5" href="#services">Services</a><a class="p-3 rounded-xl hover:bg-white/5" href="#realisations">Réalisations</a>
+        <a class="p-3 rounded-xl hover:bg-white/5" href="#packs">Packs</a><a class="p-3 rounded-xl hover:bg-white/5" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="accueil" class="relative min-h-screen flex items-center pt-28 overflow-hidden grid-bg">
+      <div class="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-blue-600/20 orb"></div>
+      <div class="absolute bottom-0 -left-20 w-96 h-96 rounded-full bg-cyan-400/10 orb" style="animation-delay:1.5s"></div>
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-20 w-full grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs font-semibold text-cyan-200 mb-7">
+            <span class="w-2 h-2 rounded-full bg-cyan-300 animate-pulse"></span> Agence digitale • Kinshasa, RDC
+          </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[.98] tracking-tight">
+            NOUS TRANSFORMONS VOS <span class="gradient-text">IDÉES</span> EN IMPACT DIGITAL.
+          </h1>
+          <p class="mt-7 text-lg text-slate-300 leading-relaxed max-w-xl">Des solutions numériques professionnelles pour développer votre visibilité, attirer plus de clients et faire grandir votre activité.</p>
+          <div class="mt-9 flex flex-col sm:flex-row gap-4">
+            <a href="https://wa.me/243819024857" target="_blank" class="gradient-btn px-7 py-4 rounded-full font-bold flex items-center justify-center gap-3 transition"><i class="fa-brands fa-whatsapp text-xl"></i> Parler à NOVA</a>
+            <a href="#realisations" class="glass px-7 py-4 rounded-full font-bold flex items-center justify-center gap-3 hover:bg-white/10 transition"><i class="fa-solid fa-arrow-down"></i> Voir nos réalisations</a>
+          </div>
+          <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-400">
+            <span><i class="fa-solid fa-circle-check text-cyan-300 mr-2"></i>Design professionnel</span>
+            <span><i class="fa-solid fa-circle-check text-cyan-300 mr-2"></i>Solutions sur mesure</span>
+            <span><i class="fa-solid fa-circle-check text-cyan-300 mr-2"></i>Accompagnement digital</span>
+          </div>
+        </div>
+        <div class="reveal relative">
+          <div class="glass rounded-[2rem] p-4 sm:p-6 shadow-2xl">
+            <div class="rounded-[1.5rem] bg-slate-950/80 border border-white/10 overflow-hidden">
+              <div class="px-5 py-4 border-b border-white/10 flex justify-between items-center"><div class="flex gap-2"><span class="w-3 h-3 rounded-full bg-white/20"></span><span class="w-3 h-3 rounded-full bg-white/20"></span><span class="w-3 h-3 rounded-full bg-white/20"></span></div><span class="text-xs text-slate-500">NOVA DIGITAL / DASHBOARD</span></div>
+              <div class="p-6 sm:p-8">
+                <div class="text-xs uppercase tracking-[.25em] text-cyan-300">Votre présence digitale</div>
+                <div class="text-3xl sm:text-4xl font-black mt-2">Passez au niveau supérieur.</div>
+                <div class="grid grid-cols-2 gap-3 mt-7">
+                  <div class="glass rounded-2xl p-4"><i class="fa-solid fa-palette text-cyan-300"></i><div class="font-bold mt-3">Branding</div><div class="text-xs text-slate-500 mt-1">Identité mémorable</div></div>
+                  <div class="glass rounded-2xl p-4"><i class="fa-solid fa-video text-cyan-300"></i><div class="font-bold mt-3">Contenu</div><div class="text-xs text-slate-500 mt-1">Vidéo & réseaux</div></div>
+                  <div class="glass rounded-2xl p-4"><i class="fa-solid fa-globe text-cyan-300"></i><div class="font-bold mt-3">Web</div><div class="text-xs text-slate-500 mt-1">Sites modernes</div></div>
+                  <div class="glass rounded-2xl p-4"><i class="fa-solid fa-wand-magic-sparkles text-cyan-300"></i><div class="font-bold mt-3">IA</div><div class="text-xs text-slate-500 mt-1">Créativité augmentée</div></div>
+                </div>
+                <div class="mt-6 h-2 bg-white/5 rounded-full overflow-hidden"><div class="h-full w-[86%] bg-gradient-to-r from-blue-600 to-cyan-300 rounded-full"></div></div>
+                <div class="flex justify-between text-xs text-slate-500 mt-2"><span>Présence digitale</span><span>Optimisation</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="border-y border-white/5 bg-white/[.02]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-8 flex flex-wrap items-center justify-center gap-7 sm:gap-12 text-sm text-slate-400">
+        <span><i class="fa-solid fa-bolt text-cyan-300 mr-2"></i>Création rapide</span>
+        <span><i class="fa-solid fa-mobile-screen text-cyan-300 mr-2"></i>100% responsive</span>
+        <span><i class="fa-solid fa-lightbulb text-cyan-300 mr-2"></i>Approche créative</span>
+        <span><i class="fa-solid fa-headset text-cyan-300 mr-2"></i>Accompagnement</span>
+      </div>
+    </section>
+
+    <!-- AGENCE -->
+    <section id="agence" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">L'agence</div>
+          <h2 class="text-4xl sm:text-5xl font-black mt-3">Votre vision mérite une <span class="gradient-text">image forte.</span></h2>
+          <p class="text-slate-300 mt-6 leading-relaxed">NOVA DIGITAL accompagne les entrepreneurs, marques et organisations qui veulent construire une présence digitale claire, moderne et convaincante.</p>
+          <p class="text-slate-400 mt-4 leading-relaxed">Nous combinons créativité, stratégie, technologie et intelligence artificielle pour transformer une idée en expérience digitale.</p>
+          <div class="mt-8 grid sm:grid-cols-2 gap-4">
+            <div class="glass rounded-2xl p-5"><div class="text-2xl font-black">6</div><div class="text-sm text-slate-400 mt-1">expertises digitales</div></div>
+            <div class="glass rounded-2xl p-5"><div class="text-2xl font-black">4</div><div class="text-sm text-slate-400 mt-1">packs adaptés aux besoins</div></div>
+          </div>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-4">
+          <div class="glass rounded-3xl p-7 card"><i class="fa-solid fa-bullseye text-3xl text-cyan-300"></i><h3 class="font-bold text-xl mt-6">Stratégie</h3><p class="text-sm text-slate-400 mt-2">Nous clarifions votre objectif et votre message.</p></div>
+          <div class="glass rounded-3xl p-7 card mt-8"><i class="fa-solid fa-pen-nib text-3xl text-cyan-300"></i><h3 class="font-bold text-xl mt-6">Créativité</h3><p class="text-sm text-slate-400 mt-2">Des visuels pensés pour attirer l'attention.</p></div>
+          <div class="glass rounded-3xl p-7 card"><i class="fa-solid fa-code text-3xl text-cyan-300"></i><h3 class="font-bold text-xl mt-6">Technologie</h3><p class="text-sm text-slate-400 mt-2">Des expériences web modernes et responsive.</p></div>
+          <div class="glass rounded-3xl p-7 card mt-8"><i class="fa-solid fa-robot text-3xl text-cyan-300"></i><h3 class="font-bold text-xl mt-6">Intelligence IA</h3><p class="text-sm text-slate-400 mt-2">L'IA au service de votre productivité.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-white/[.02]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Nos expertises</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Tout ce qu'il faut pour <span class="gradient-text">être visible.</span></h2><p class="text-slate-400 mt-5">Une offre complète pour construire, développer et professionnaliser votre présence digitale.</p></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+          <div class="glass rounded-3xl p-7 card reveal"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-cyan-300 flex items-center justify-center text-2xl"><i class="fa-solid fa-palette"></i></div><h3 class="text-xl font-bold mt-6">Design Graphique</h3><p class="text-slate-400 text-sm mt-3">Logos, identités visuelles, affiches, flyers, cartes de visite et chartes graphiques.</p><div class="mt-6 text-cyan-300 font-bold">À partir de 10 $</div></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-cyan-300 flex items-center justify-center text-2xl"><i class="fa-solid fa-film"></i></div><h3 class="text-xl font-bold mt-6">Création Vidéo</h3><p class="text-slate-400 text-sm mt-3">Vidéos promotionnelles, TikTok, Reels, Shorts, publicités et montage avec avatar IA.</p><div class="mt-6 text-cyan-300 font-bold">À partir de 10 $</div></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-cyan-300 flex items-center justify-center text-2xl"><i class="fa-solid fa-hashtag"></i></div><h3 class="text-xl font-bold mt-6">Réseaux Sociaux</h3><p class="text-slate-400 text-sm mt-3">Création & optimisation de pages, calendriers de contenu, stratégie et community management.</p><div class="mt-6 text-cyan-300 font-bold">À partir de 15 $</div></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-cyan-300 flex items-center justify-center text-2xl"><i class="fa-solid fa-globe"></i></div><h3 class="text-xl font-bold mt-6">Sites Web</h3><p class="text-slate-400 text-sm mt-3">Sites vitrines, pages de présentation, design responsive et accompagnement hébergement.</p><div class="mt-6 text-cyan-300 font-bold">À partir de 50 $</div></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-cyan-300 flex items-center justify-center text-2xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3 class="text-xl font-bold mt-6">Intelligence Artificielle</h3><p class="text-slate-400 text-sm mt-3">Rédaction, génération d'images, scripts, assistants IA personnalisés et automatisation.</p><div class="mt-6 text-cyan-300 font-bold">À partir de 10 $</div></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-cyan-300 flex items-center justify-center text-2xl"><i class="fa-solid fa-chart-line"></i></div><h3 class="text-xl font-bold mt-6">Marketing Digital</h3><p class="text-slate-400 text-sm mt-3">Stratégie de visibilité, campagnes Facebook, TikTok, Instagram et génération de leads.</p><div class="mt-6 text-cyan-300 font-bold">À partir de 25 $</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REALISATIONS -->
+    <section id="realisations" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="reveal flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Portfolio</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Nos réalisations</h2><p class="text-slate-400 mt-4 max-w-2xl">Quelques concepts représentatifs des projets que NOVA DIGITAL peut concevoir pour une marque.</p></div>
+          <div class="flex flex-wrap gap-2" id="filters">
+            <button data-filter="all" class="filter px-4 py-2 rounded-full bg-white text-slate-900 text-sm font-bold">Tout</button>
+            <button data-filter="branding" class="filter px-4 py-2 rounded-full glass text-sm">Branding</button>
+            <button data-filter="social" class="filter px-4 py-2 rounded-full glass text-sm">Social Media</button>
+            <button data-filter="web" class="filter px-4 py-2 rounded-full glass text-sm">Web</button>
+            <button data-filter="video" class="filter px-4 py-2 rounded-full glass text-sm">Vidéo</button>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+          <div class="portfolio-item branding glass rounded-3xl overflow-hidden card reveal"><div class="h-52 bg-gradient-to-br from-blue-700 via-indigo-700 to-slate-950 p-7 flex flex-col justify-between"><span class="text-xs uppercase tracking-widest text-white/60">Brand Identity</span><div class="text-3xl font-black">NOVA<br><span class="text-cyan-300">BRAND</span></div></div><div class="p-5"><h3 class="font-bold">Identité visuelle</h3><p class="text-xs text-slate-500 mt-1">Logo • Couleurs • Supports</p></div></div>
+          <div class="portfolio-item social glass rounded-3xl overflow-hidden card reveal"><div class="h-52 bg-gradient-to-br from-cyan-500/70 via-blue-700 to-slate-950 p-7"><span class="text-xs uppercase tracking-widest text-white/70">Social Media</span><div class="mt-12 text-2xl font-black">MAKE<br>THEM STOP.</div></div><div class="p-5"><h3 class="font-bold">Campagne sociale</h3><p class="text-xs text-slate-500 mt-1">Posts • Reels • Stratégie</p></div></div>
+          <div class="portfolio-item web glass rounded-3xl overflow-hidden card reveal"><div class="h-52 bg-slate-950 p-5"><div class="rounded-xl border border-white/10 overflow-hidden h-full"><div class="h-5 border-b border-white/10 flex gap-1 p-2"><span class="w-1.5 h-1.5 rounded-full bg-white/30"></span><span class="w-1.5 h-1.5 rounded-full bg-white/30"></span></div><div class="p-5"><div class="h-3 w-2/3 bg-cyan-300/60 rounded"></div><div class="h-2 w-full bg-white/10 rounded mt-3"></div><div class="grid grid-cols-3 gap-2 mt-6"><div class="h-14 bg-blue-500/20 rounded"></div><div class="h-14 bg-cyan-500/20 rounded"></div><div class="h-14 bg-white/10 rounded"></div></div></div></div></div><div class="p-5"><h3 class="font-bold">Site vitrine</h3><p class="text-xs text-slate-500 mt-1">UX • UI • Responsive</p></div></div>
+          <div class="portfolio-item video glass rounded-3xl overflow-hidden card reveal"><div class="h-52 bg-gradient-to-br from-slate-800 to-black p-7 flex items-center justify-center"><div class="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center text-cyan-300 text-2xl"><i class="fa-solid fa-play"></i></div></div><div class="p-5"><h3 class="font-bold">Vidéo publicitaire</h3><p class="text-xs text-slate-500 mt-1">Script • Montage • IA</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="py-24 bg-white/[.02]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="reveal text-center"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Notre méthode</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Simple. Clair. <span class="gradient-text">Efficace.</span></h2></div>
+        <div class="grid md:grid-cols-4 gap-5 mt-14">
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-cyan-300 text-sm font-black">01</div><h3 class="font-bold text-xl mt-5">Découverte</h3><p class="text-sm text-slate-400 mt-3">Nous comprenons votre activité, vos objectifs et votre public.</p></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-cyan-300 text-sm font-black">02</div><h3 class="font-bold text-xl mt-5">Stratégie</h3><p class="text-sm text-slate-400 mt-3">Nous définissons une direction créative adaptée à votre besoin.</p></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-cyan-300 text-sm font-black">03</div><h3 class="font-bold text-xl mt-5">Création</h3><p class="text-sm text-slate-400 mt-3">Notre équipe transforme la stratégie en contenus et solutions.</p></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-cyan-300 text-sm font-black">04</div><h3 class="font-bold text-xl mt-5">Livraison</h3><p class="text-sm text-slate-400 mt-3">Vous recevez un résultat professionnel prêt à être utilisé.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="equipe" class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="reveal text-center max-w-3xl mx-auto"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Notre équipe</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Des compétences au service de votre <span class="gradient-text">vision.</span></h2><p class="text-slate-400 mt-5">Une organisation pensée autour des expertises essentielles d'une agence digitale moderne.</p></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+          <div class="glass rounded-3xl p-6 card reveal"><div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-300 flex items-center justify-center text-2xl font-black">CD</div><h3 class="font-bold text-lg mt-5">Direction créative</h3><p class="text-sm text-slate-400 mt-1">Vision & identité de marque</p></div>
+          <div class="glass rounded-3xl p-6 card reveal"><div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-300 flex items-center justify-center text-2xl font-black">DG</div><h3 class="font-bold text-lg mt-5">Design graphique</h3><p class="text-sm text-slate-400 mt-1">Création visuelle & branding</p></div>
+          <div class="glass rounded-3xl p-6 card reveal"><div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-300 flex items-center justify-center text-2xl font-black">CM</div><h3 class="font-bold text-lg mt-5">Social Media</h3><p class="text-sm text-slate-400 mt-1">Contenu & stratégie digitale</p></div>
+          <div class="glass rounded-3xl p-6 card reveal"><div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-300 flex items-center justify-center text-2xl font-black">IA</div><h3 class="font-bold text-lg mt-5">IA & technologie</h3><p class="text-sm text-slate-400 mt-1">Automatisation & solutions web</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKS -->
+    <section id="packs" class="py-24 bg-white/[.02]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="reveal text-center"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Nos packs</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Choisissez votre <span class="gradient-text">niveau.</span></h2></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14 items-stretch">
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-sm text-slate-400">START</div><div class="text-4xl font-black mt-2">25 $</div><div class="text-xs text-slate-500 mt-1">Pour démarrer</div><ul class="mt-7 space-y-3 text-sm text-slate-300"><li>✓ Logo</li><li>✓ 3 affiches</li><li>✓ 3 publications</li><li>✓ Bio professionnelle</li><li>✓ WhatsApp Business</li></ul><a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20DIGITAL%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Pack%20Start." target="_blank" class="block text-center mt-8 py-3 rounded-xl border border-white/10 hover:bg-white/5 font-bold">Choisir</a></div>
+          <div class="relative rounded-3xl p-[1px] bg-gradient-to-b from-blue-500 to-cyan-300 reveal"><div class="bg-[#0b1524] rounded-[23px] p-7 h-full card"><div class="absolute -top-3 right-5 px-3 py-1 rounded-full bg-cyan-300 text-slate-950 text-xs font-black">POPULAIRE</div><div class="text-sm text-cyan-300">BUSINESS</div><div class="text-4xl font-black mt-2">75 $</div><div class="text-xs text-slate-500 mt-1">Pour accélérer</div><ul class="mt-7 space-y-3 text-sm text-slate-300"><li>✓ Logo pro</li><li>✓ 5 affiches</li><li>✓ 3 vidéos courtes</li><li>✓ Page Facebook & TikTok pro</li><li>✓ Calendrier 7 jours</li></ul><a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20DIGITAL%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Pack%20Business." target="_blank" class="block text-center mt-8 py-3 rounded-xl gradient-btn font-bold">Choisir</a></div></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-sm text-slate-400">PRO</div><div class="text-4xl font-black mt-2">150 $</div><div class="text-xs text-slate-500 mt-1">Pour se professionnaliser</div><ul class="mt-7 space-y-3 text-sm text-slate-300"><li>✓ Identité visuelle complète</li><li>✓ 10 affiches & 5 vidéos</li><li>✓ Site web vitrine</li><li>✓ Gestion réseaux sociaux</li><li>✓ Stratégie de contenu</li></ul><a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20DIGITAL%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Pack%20Pro." target="_blank" class="block text-center mt-8 py-3 rounded-xl border border-white/10 hover:bg-white/5 font-bold">Choisir</a></div>
+          <div class="glass rounded-3xl p-7 card reveal"><div class="text-sm text-slate-400">PREMIUM</div><div class="text-4xl font-black mt-2">250 $<span class="text-sm text-slate-500">/mois</span></div><div class="text-xs text-slate-500 mt-1">Pour une présence continue</div><ul class="mt-7 space-y-3 text-sm text-slate-300"><li>✓ Gestion FB & TikTok</li><li>✓ 12 vidéos/mois</li><li>✓ 12 affiches/mois</li><li>✓ Campagnes publicitaires</li><li>✓ Assistance digitale</li></ul><a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20DIGITAL%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Pack%20Premium." target="_blank" class="block text-center mt-8 py-3 rounded-xl border border-white/10 hover:bg-white/5 font-bold">Choisir</a></div>
+        </div>
+        <p class="text-center text-xs text-slate-500 mt-7">Les tarifs affichés sont des prix de départ. Un devis peut varier selon la complexité du projet.</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="reveal text-center"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Témoignages</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Ce que nos clients <span class="gradient-text">disent.</span></h2></div>
+        <div class="grid md:grid-cols-3 gap-5 mt-12">
+          <div class="glass rounded-3xl p-7 reveal"><div class="text-cyan-300 text-xl">★★★★★</div><p class="text-slate-300 mt-5 leading-relaxed">“Grâce au Pack Business de Nova Digital, ma page TikTok a explosé en visibilité. Un travail très professionnel !”</p><div class="mt-6 font-bold">Christian M.</div><div class="text-xs text-slate-500">Entrepreneur</div></div>
+          <div class="glass rounded-3xl p-7 reveal"><div class="text-cyan-300 text-xl">★★★★★</div><p class="text-slate-300 mt-5 leading-relaxed">“Une équipe créative, rapide et professionnelle. Mon identité visuelle correspond enfin à l'image de mon entreprise.”</p><div class="mt-6 font-bold">Sarah K.</div><div class="text-xs text-slate-500">Commerçante</div></div>
+          <div class="glass rounded-3xl p-7 reveal"><div class="text-cyan-300 text-xl">★★★★★</div><p class="text-slate-300 mt-5 leading-relaxed">“Le site web et les contenus ont vraiment amélioré notre présence en ligne. Je recommande Nova Digital.”</p><div class="mt-6 font-bold">David L.</div><div class="text-xs text-slate-500">Entrepreneur</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-white/[.02]">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-stretch">
+          <div class="reveal">
+            <div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Demander un devis</div>
+            <h2 class="text-4xl sm:text-5xl font-black mt-3">Parlons de votre <span class="gradient-text">projet.</span></h2>
+            <p class="text-slate-400 mt-5 leading-relaxed">Expliquez-nous votre besoin. Votre message sera préparé automatiquement sur WhatsApp pour accélérer l'échange.</p>
+            <div class="mt-9 space-y-4">
+              <div class="glass rounded-2xl p-5 flex gap-4"><div class="w-11 h-11 rounded-xl bg-green-500/10 text-green-300 flex items-center justify-center"><i class="fa-brands fa-whatsapp text-xl"></i></div><div><div class="font-bold">WhatsApp</div><div class="text-sm text-slate-400">+243 819 024 857</div></div></div>
+              <div class="glass rounded-2xl p-5 flex gap-4"><div class="w-11 h-11 rounded-xl bg-blue-500/10 text-cyan-300 flex items-center justify-center"><i class="fa-solid fa-location-dot"></i></div><div><div class="font-bold">Localisation</div><div class="text-sm text-slate-400">Kinshasa, République démocratique du Congo</div></div></div>
+            </div>
+          </div>
+          <form id="quoteForm" class="glass rounded-3xl p-6 sm:p-8 reveal">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <label class="text-sm text-slate-300">Nom<input required id="name" class="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cyan-300" placeholder="Votre nom"></label>
+              <label class="text-sm text-slate-300">Téléphone<input required id="phone" class="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cyan-300" placeholder="+243..."></label>
+            </div>
+            <label class="block text-sm text-slate-300 mt-4">Service<select id="service" class="mt-2 w-full bg-[#101c2d] border border-white/10 rounded-xl px-4 py-3 outline-none"><option>Design Graphique</option><option>Création Vidéo</option><option>Réseaux Sociaux</option><option>Site Web</option><option>Intelligence Artificielle</option><option>Marketing Digital</option><option>Autre</option></select></label>
+            <label class="block text-sm text-slate-300 mt-4">Budget indicatif<select id="budget" class="mt-2 w-full bg-[#101c2d] border border-white/10 rounded-xl px-4 py-3 outline-none"><option>Moins de 25 $</option><option>25 – 75 $</option><option>75 – 150 $</option><option>150 – 250 $</option><option>250 $ et plus</option></select></label>
+            <label class="block text-sm text-slate-300 mt-4">Votre besoin<textarea required id="message" rows="5" class="mt-2 w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-cyan-300" placeholder="Décrivez brièvement votre projet..."></textarea></label>
+            <button class="gradient-btn w-full mt-5 py-4 rounded-xl font-black flex items-center justify-center gap-3 transition"><i class="fa-brands fa-whatsapp text-xl"></i> Envoyer sur WhatsApp</button>
+            <p class="text-[11px] text-slate-500 text-center mt-3">Aucun compte supplémentaire n'est nécessaire.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="reveal text-center"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">FAQ</div><h2 class="text-4xl sm:text-5xl font-black mt-3">Questions fréquentes</h2></div>
+        <div id="faqList" class="mt-12 space-y-3">
+          <div class="glass rounded-2xl overflow-hidden reveal"><button class="faqBtn w-full p-5 flex justify-between text-left font-bold">Travaillez-vous uniquement à Kinshasa ?<i class="fa-solid fa-plus text-cyan-300"></i></button><div class="faqAnswer hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed">Non. NOVA DIGITAL peut accompagner des clients à distance en RDC et à l'international.</div></div>
+          <div class="glass rounded-2xl overflow-hidden reveal"><button class="faqBtn w-full p-5 flex justify-between text-left font-bold">Comment commander une prestation ?<i class="fa-solid fa-plus text-cyan-300"></i></button><div class="faqAnswer hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed">Cliquez sur un bouton WhatsApp, décrivez votre besoin et nous vous répondons pour préciser le projet et le devis.</div></div>
+          <div class="glass rounded-2xl overflow-hidden reveal"><button class="faqBtn w-full p-5 flex justify-between text-left font-bold">Les tarifs sont-ils définitifs ?<i class="fa-solid fa-plus text-cyan-300"></i></button><div class="faqAnswer hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed">Non. Les prix indiqués sont des tarifs de départ. Le montant final dépend de la complexité et du périmètre du projet.</div></div>
+          <div class="glass rounded-2xl overflow-hidden reveal"><button class="faqBtn w-full p-5 flex justify-between text-left font-bold">Puis-je demander une prestation personnalisée ?<i class="fa-solid fa-plus text-cyan-300"></i></button><div class="faqAnswer hidden px-5 pb-5 text-slate-400 text-sm leading-relaxed">Oui. Si votre besoin ne correspond pas à un pack, contactez-nous et nous pouvons construire une offre sur mesure.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="relative overflow-hidden rounded-[2rem] p-8 sm:p-14 text-center glass reveal">
+          <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+          <div class="relative"><div class="text-cyan-300 text-sm font-bold uppercase tracking-[.25em]">Prêt à passer à l'action ?</div><h2 class="text-4xl sm:text-6xl font-black mt-4">Votre entreprise mérite d'être <span class="gradient-text">visible.</span></h2><p class="text-slate-400 mt-5 max-w-2xl mx-auto">Transformons ensemble votre idée en une présence digitale professionnelle.</p><a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20DIGITAL%2C%20je%20souhaite%20discuter%20d%27un%20projet." target="_blank" class="inline-flex gradient-btn px-8 py-4 rounded-full font-black mt-8 items-center gap-3 transition"><i class="fa-brands fa-whatsapp text-xl"></i> Démarrer mon projet</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/5 py-10 pb-28 md:pb-10">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col md:flex-row gap-6 items-center justify-between">
+      <div><div class="font-black tracking-wider">NOVA <span class="text-cyan-300">DIGITAL</span></div><div class="text-xs text-slate-500 mt-2">Nous transformons vos idées en impact et votre visibilité en croissance.</div></div>
+      <div class="text-xs text-slate-500 text-center">© 2026 NOVA DIGITAL — Tous droits réservés. • Kinshasa, RDC</div>
+      <a href="https://wa.me/243819024857" target="_blank" class="text-green-300 text-xl" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <!-- MOBILE CTA -->
+  <div class="mobile-cta fixed bottom-0 left-0 right-0 z-40 p-3 bg-[#050b16]/95 backdrop-blur-xl border-t border-white/10">
+    <a href="https://wa.me/243819024857?text=Bonjour%20NOVA%20DIGITAL%2C%20je%20souhaite%20un%20devis." target="_blank" class="gradient-btn w-full rounded-xl py-3 text-center font-black"><i class="fa-brands fa-whatsapp mr-2"></i> Demander un devis</a>
+  </div>
+
+  <script>
+    const navbar=document.getElementById('navbar');
+    window.addEventListener('scroll',()=>navbar.classList.toggle('nav-scrolled',window.scrollY>20));
+    const menuBtn=document.getElementById('menuBtn'), mobileMenu=document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.add('hidden')));
+
+    const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    document.querySelectorAll('.filter').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        document.querySelectorAll('.filter').forEach(b=>{b.classList.remove('bg-white','text-slate-900','font-bold');b.classList.add('glass')});
+        btn.classList.remove('glass');btn.classList.add('bg-white','text-slate-900','font-bold');
+        const f=btn.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item=>item.classList.toggle('hidden',f!=='all'&&!item.classList.contains(f)));
+      });
+    });
+
+    document.querySelectorAll('.faqBtn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const ans=btn.nextElementSibling, icon=btn.querySelector('i'), open=!ans.classList.contains('hidden');
+        document.querySelectorAll('.faqAnswer').forEach(a=>a.classList.add('hidden'));
+        document.querySelectorAll('.faqBtn i').forEach(i=>{i.className='fa-solid fa-plus text-cyan-300'});
+        if(!open){ans.classList.remove('hidden');icon.className='fa-solid fa-minus text-cyan-300'}
+      });
+    });
+
+    document.getElementById('quoteForm').addEventListener('submit',e=>{
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const service=document.getElementById('service').value;
+      const budget=document.getElementById('budget').value;
+      const message=document.getElementById('message').value.trim();
+      const text=`Bonjour NOVA DIGITAL 👋%0A%0AJe souhaite demander un devis.%0A%0A👤 Nom : ${encodeURIComponent(name)}%0A📱 Téléphone : ${encodeURIComponent(phone)}%0A💼 Service : ${encodeURIComponent(service)}%0A💰 Budget : ${encodeURIComponent(budget)}%0A📝 Besoin : ${encodeURIComponent(message)}`;
+      window.open(`https://wa.me/243819024857?text=${text}`,'_blank');
+    });
+  </script>
+</body>
+</html>
